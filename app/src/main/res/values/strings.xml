@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SignUpForm</string>
+    <string name="email">Email</string>
+    <string name= "emailHint">user.email@example.com</string>
+    <string name="password">Password</string>
+    <string name="passwordConfirm">Confirm Password</string>
+    <string name="passwordConfirmation">Confirm Password</string>
+    <string name="name">Name</string>
+</resources>
