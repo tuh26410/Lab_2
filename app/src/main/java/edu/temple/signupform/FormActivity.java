@@ -8,12 +8,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class FormActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final ArrayList <String> userData = new ArrayList<String>();
 
         final String passwordConfirmToast = "The two passwords do not match.";
         final String passwordToast = "You need to enter a password.";
@@ -29,17 +33,25 @@ public class FormActivity extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(name.getText().toString() == ""){
+                if (name.getText().toString() == "") {
                     Toast.makeText(FormActivity.this, nameToast, Toast.LENGTH_SHORT);
                 }
-                if(email.getText().toString() == ""){
+                if (email.getText().toString() == "") {
                     Toast.makeText(FormActivity.this, emailToast, Toast.LENGTH_SHORT);
                 }
-                if(password.getText().toString() == ""){
+                if (password.getText().toString() == "") {
                     Toast.makeText(FormActivity.this, passwordToast, Toast.LENGTH_SHORT);
                 }
-                if(passwordConfirm.getText().toString() != password.getText().toString()){
+                if (passwordConfirm.getText().toString() != password.getText().toString()) {
                     Toast.makeText(FormActivity.this, passwordConfirmToast, Toast.LENGTH_SHORT);
+                } else {
+
+
+                    userData.add(name.getText().toString());
+                    userData.add(email.getText().toString());
+                    userData.add(password.getText().toString());
+
+                    Toast.makeText(FormActivity.this, "Welcome, " + userData.get(0) + ", to the SignUpForm App!", Toast.LENGTH_SHORT);
                 }
             }
         });
