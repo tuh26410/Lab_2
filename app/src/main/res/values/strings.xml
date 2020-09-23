@@ -6,4 +6,7 @@
     <string name="passwordConfirm">Confirm Password</string>
     <string name="passwordConfirmation">Confirm Password</string>
     <string name="name">Name</string>
+    <string name="saveButton">Save</string>
+
+
 </resources>
